@@ -126,7 +126,7 @@ jobs:
         with:
           context: .
           platforms: linux/amd64,linux/arm64
-          tags: ghcr.io/openclarity/kubeclarity-cis-docker-benchmark-scanner:${{ inputs.image_tag }}
+          tags: ghcr.io/thejefflarson/kubeclarity-cis-docker-benchmark-scanner:${{ inputs.image_tag }}
           file: Dockerfile.cis_docker_benchmark_scanner
           push: ${{ inputs.push }}
           outputs: "${{ env.OUTPUTS }}"
@@ -184,7 +184,7 @@ jobs:
         with:
           context: .
           platforms: linux/amd64,linux/arm64
-          tags: ghcr.io/openclarity/kubeclarity-runtime-k8s-scanner:${{ inputs.image_tag }}
+          tags: ghcr.io/thejefflarson/kubeclarity-runtime-k8s-scanner:${{ inputs.image_tag }}
           file: Dockerfile.runtime_k8s_scanner
           push: ${{ inputs.push }}
           outputs: "${{ env.OUTPUTS }}"
