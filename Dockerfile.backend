@@ -6,6 +6,7 @@ WORKDIR /app/ui-build
 COPY ui .
 RUN npm config set fetch-retries 5
 RUN npm i
+RUN npm audit fix
 RUN npm run build
 
 FROM golang:1.21-alpine AS builder
